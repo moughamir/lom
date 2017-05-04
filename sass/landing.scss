@@ -1,0 +1,239 @@
+@import "reset";
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section {
+    min-height: 100vh;
+    &-alpha {}
+}
+
+.landing {
+    &-header {
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        .header {
+            height: 100px;
+        }
+    }
+    &-footer {
+        background: #3e3e40;
+        height: 100px;
+    }
+}
+
+.parallax {
+    &-bg {
+        background: #3e3e40 url('../img/rift.png') center 80% no-repeat fixed;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        &:before {
+            content: '';
+            display: block;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(67, 67, 67, 0.3));
+        }
+    }
+}
+
+.grid {
+    &-f {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0 28px;
+    }
+    &-third {
+        display: inline-flex;
+        width: 33%;
+        height: 100%;
+        align-items: center;
+        position: relative;
+    }
+}
+
+// top nav
+.logo {
+    margin: 0 auto;
+}
+
+.menu {
+    &-icon {
+        height: 28px;
+        fill: #fff;
+        fill-rule: evenodd;
+    }
+    &-container {}
+}
+
+#sm {
+    &-facebook,
+    &-youtube,
+    &-twitter,
+    &-twitch {
+        fill: #fff;
+    }
+    &-twitch {
+        &-rect,
+        &-path01 {
+            fill: #fff;
+        }
+        &-path00 {
+            fill: transparent;
+        }
+    }
+}
+
+// Summone to war
+.war {
+    &Ship {
+        height: calc(100vh - 100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &Cry {
+        font-family: 'Montserrat Hairline', 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 100;
+        .lowder {
+            display: block;
+            font-family: 'Droid Serif', serif;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 2px;
+            border-bottom: 1px solid #fff;
+            margin: 25px auto;
+        }
+    }
+}
+
+// youtube fill:#F61C0D;
+//id="sm-twicth-rect"
+//fill:#7D3DAF;
+//id="sm-twicth-path00"
+//fill:#FFFFFF;
+//id="sm-twicth-path01"
+//fill:#7D3DAF
+.icon {
+    width: 28px;
+    height: 28px;
+    margin: 5px;
+    &-facebook:hover {
+        fill: #385C8E;
+    }
+    &-twitter {
+        fill: #65BBF2;
+    }
+}
+
+.sm {
+    &-list {
+        position: absolute;
+        right: 0;
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.scrollDown {
+    position: absolute;
+    bottom: 28px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.arrow {
+    width: 38px;
+    height: 38px;
+    animation: bounce 3s infinite linear;
+    filter: drop-shadow(0 0 2px #000);
+    &:hover {
+        animation-play-state: pause;
+        cursor: pointer;
+    }
+}
+
+// form
+.form {
+    display: flex;
+}
+
+.btn-primary {
+    height: 44px;
+    display: inline-flex;
+    width: 150px;
+    background: #5cc2be;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.summoner {
+    &-input {
+        height: 40px;
+        width: 320px;
+        text-align: center;
+        font-size: 1.4rem;
+        border: 1px solid #e0e1e3;
+        border-radius: 3px 0 0 3px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+// Keyframes
+// Bounce Enter animation: bounceE 400ms linear;
+@keyframes bounceE {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+    75% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
